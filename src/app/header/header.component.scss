@@ -1,0 +1,36 @@
+@import "../../styles";
+
+* {
+  background-color: honeydew;
+}
+
+p {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: $link-text;
+  &.title:hover {
+    color: $link-text;
+  }
+  &:hover {
+    color: $link-hover-text;
+  }
+}
+
+
+div {
+  padding: 10px;
+  width: 100vw;
+  @include display-flex;
+}
+
+.big-top-nav {
+  align-items: baseline;
+}
+
+.search, .login {
+  font-size: 15px;
+  color: $small-link-text;
+}
