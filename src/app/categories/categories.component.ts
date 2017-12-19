@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
-
+  public category;
   constructor() { }
 
   ngOnInit() {
+    this.category = window.location;
+    console.log(this.category);
   }
 
 }

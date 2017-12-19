@@ -1,3 +1,11 @@
-<p>
-  categories works!
-</p>
+<div *ngIf="category.pathname != '/'">
+  <p>sort by...</p>
+  <p>page 1/4</p>
+  <p>browse by</p>
+  <p>filter by</p>
+
+  <div *ngIf="category.pathname === '/clothing'">
+    <h1>Url thing goes here</h1>
+    <p>pipe inventory for only url thing and display here</p>
+  </div>
+</div>

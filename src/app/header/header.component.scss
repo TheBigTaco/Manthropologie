@@ -1,11 +1,36 @@
 @import "../../styles";
 
-* {
+.nav {
+  @include display-flex;
+  width: 100%;
+  align-items: baseline;
   background-color: honeydew;
 }
 
-p {
+.title{
+  font-size: 20px;
+}
+
+.login p{
+  display: none;
+}
+
+.big-top-nav{
   display: flex;
+  justify-content: space-between;
+}
+
+.top-nav{
+  margin: 10px;
+}
+
+.categories {
+  & p{
+    font-size: 25px;
+    background-color: lightyellow;
+    padding: 15px 25px;
+    border-bottom: 1px solid gray;
+  }
 }
 
 a {
@@ -19,18 +44,33 @@ a {
   }
 }
 
-
-div {
-  padding: 10px;
-  width: 100vw;
-  @include display-flex;
-}
-
-.big-top-nav {
-  align-items: baseline;
-}
-
 .search, .login {
   font-size: 15px;
   color: $small-link-text;
+}
+
+
+@media screen and (min-width: $medium-media-query) {
+  * {
+    background-color: honeydew;
+  }
+
+  p {
+    display: flex;
+  }
+
+  div {
+    padding: 10px;
+    width: 100vw;
+    @include display-flex;
+  }
+
+  .big-top-nav {
+    align-items: baseline;
+  }
+
+.nav {
+
+}
+
 }
