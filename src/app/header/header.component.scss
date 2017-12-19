@@ -1,5 +1,15 @@
 @import "../../styles";
 
+i {
+  color: white;
+}
+
+h1 {
+  @include barber-font;
+  font-family: 'Jaapokki', sans-serif;
+  color: white;
+}
+
 //small screen styles
 .nav {
   @include display-flex;

@@ -5,7 +5,7 @@
 
   </div>
   <div class="top-nav">
-    <h1><a class="title" routerLink="" (click)="categoryClick('oneway')">Manthropologie</a></h1>
+    <h1><a class="title" routerLink="" (click)="categoryClick('oneway')">MANTHROPOLOGIE</a></h1>
   </div>
   <div class="big-top-nav">
     <div class="top-nav"><p class="search"><i class="fa fa-search" aria-hidden="true"></i></p></div>
@@ -21,11 +21,13 @@
   <p><a routerLink="shoes-accessories" (click)="categoryClick()">Shoes/Accessories</a></p>
   <p><a routerLink="furniture" (click)="categoryClick()">Furniture</a></p>
   <p><a routerLink="grooming" (click)="categoryClick()">Grooming</a></p>
+  <p *ngIf="admin"><a href="#">Product List</a></p>
 </div>
 
 <!-- This is the modal -->
 <div class="modal" id="modal-one">
   <div class="modal-content">
+    <a href="#close"><button type="button" name="button">x</button></a>
     <div class="login">
       <h4>Login</h4>
       <input type="text" [(ngModel)]="username" placeholder="Username">
@@ -39,5 +41,6 @@
       <input type="text" [(ngModel)]="newPassword" placeholder="Password">
       <a href="#close" class="btn closebtn" (click)="createAccount()">Create</a>
     </div>
+    <a href="#close"><button type="button" name="button" (click)="logout()">logout</button></a>
   </div>
 </div>

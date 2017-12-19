@@ -9,12 +9,4 @@ export class Manthro {
   constructor(private database: AngularFireDatabase) {
     this.users = database.list('users');
   }
-
-  getUsers(){
-    return this.users;
-  }
-
-  addUser(newUser: User) {
-    this.users.push(newUser);
-  }
 }
