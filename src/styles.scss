@@ -14,3 +14,19 @@ $small-link-text: blue;
   display: flex;
   justify-content: space-around;
 }
+html {
+  height: 100%;
+  body {
+    height: 100%;
+    width: 100%;
+    app-root {
+      height: 100%;
+      width: 100%;
+      app-splash {
+        height: 100%;
+        width: 100%;
+        background-color: blue;
+      }
+    }
+  }
+}
