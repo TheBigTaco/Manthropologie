@@ -10,15 +10,34 @@
   <div class="big-top-nav">
     <div class="top-nav"><p class="search"><i class="fa fa-search" aria-hidden="true"></i></p></div>
     <div class="top-nav">
-      <p><a routerLink="login" class="login"><p>Login</p><i class="fa fa-user" aria-hidden="true"></i>
+      <p><a href="#modal-one" class="btn openbtn"><p>Login</p><i class="fa fa-user" aria-hidden="true"></i>
       </a></p>
     </div>
   </div>
-
 </div>
+
 <div class="categories" *ngIf="display">
   <p><a routerLink="clothing" (click)="categoryClick()">Clothing</a></p>
   <p><a routerLink="shoes-accessories" (click)="categoryClick()">Shoes/Accessories</a></p>
   <p><a routerLink="furniture" (click)="categoryClick()">Furniture</a></p>
   <p><a routerLink="grooming" (click)="categoryClick()">Grooming</a></p>
+</div>
+
+<!-- This is the modal -->
+<div class="modal" id="modal-one">
+  <div class="modal-content">
+    <div class="login">
+      <h4>Login</h4>
+      <input type="text" [(ngModel)]="username" placeholder="Username">
+      <input type="text" [(ngModel)]="password" placeholder="Password">
+      <a href="#close" class="btn closebtn" (click)="login()">Login</a>
+    </div>
+    <hr>
+    <div class="create">
+      <h4>Create Account</h4>
+      <input type="text" [(ngModel)]="newUsername" placeholder="Username">
+      <input type="text" [(ngModel)]="newPassword" placeholder="Password">
+      <a href="#close" class="btn closebtn" (click)="login()">Create</a>
+    </div>
+  </div>
 </div>
