@@ -1,0 +1,14 @@
+{
+  "name": "manthropologie",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/TheBigTaco/Manthropologie",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
