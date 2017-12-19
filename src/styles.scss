@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  height: 100%;
+  body {
+    height: 100%;
+    width: 100%;
+    app-root {
+      height: 100%;
+      width: 100%;
+      app-splash {
+        height: 100%;
+        width: 100%;
+        background-color: blue;
+      }
+    }
+  }
+}
+
+
+
+
+
+// potential colors:
+// #A5553C = blanketbrown
+// #6E736F = blanketgrey
+// #4F7285 = platedarkblue
+// #9CADB8 - platelightblue
+// #E1AFA5 - platebrown
+// #B5C6D5 - plate lightest blue
+// #F5957E - plate brown
+// #4D5975 - plate darkest blue
+// #5B3F3F - leather dark brown
+// #C5A385 - worn leather light brown
+// #C4937B - copper brown
+// #E9A799 - wood light brown
+// #391312 - wood dark brown
