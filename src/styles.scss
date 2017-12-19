@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+// @import url("./../../assets/jaapokki-regular.ttf");
+// $Jaapokki: 'Jaapokki';
+
 @mixin barber-font {
   @font-family {
     font-family: 'Jaapokki';
@@ -19,6 +22,9 @@ $small-link-text: blue;
 $browse-box-color: lightgray;
 $browse-box-border-color: gray;
 $hover-shop-link-color: rgba(211,211,211, 0.7);
+$top-banner-color: pink;
+$carousel-item-description-bg: rgba(211,211,211, 0.7);
+$feature-box-color: pink;
 
 $small-media-query: 770px; //"tablet" - for screens sized between 770px and 1025px;
 $medium-media-query: 1025px; //"laptop" - for screens sized between 1025px and 1320px;
@@ -45,3 +51,11 @@ html {
     }
   }
 }
+
+.container{
+  padding: 15px;
+}
+
+// h1, h2, {
+//   font-family: 'Jaapokki';
+// }
