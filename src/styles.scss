@@ -8,10 +8,14 @@
 $link-text: black;
 $link-hover-text: red;
 $small-link-text: blue;
+$browse-box-color: lightgray;
+$browse-box-border-color: gray;
+$hover-shop-link-color: rgba(211,211,211, 0.7);
 
 $small-media-query: 770px; //"tablet" - for screens sized between 770px and 1025px;
 $medium-media-query: 1025px; //"laptop" - for screens sized between 1025px and 1320px;
 $large-media-query: 1320px; //"large screeens" - for biggest screens
+$xlarge-media-query: 1550px; //"large screeens" - for biggest screens
 
 @mixin display-flex {
   display: flex;

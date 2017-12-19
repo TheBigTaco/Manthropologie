@@ -1,12 +1,147 @@
+@import "../../styles";
+
 /* For testing only */
 
-*:not(body):not(html) {
-  box-sizing:border-box;
-  border:1px dashed #000;
-}
-
-.columns {
-  min-height: 100px;
-}
-
 /* End for testing */
+
+// Sorting area
+
+.container{
+  padding: 15px;
+}
+
+.list-options{
+  margin: 10px 0;
+}
+
+.list-options-title, .drop-down{
+  padding: 10px;
+}
+
+.list-options-title {
+  background-color: $browse-box-color;
+  font-size: 15px;
+}
+
+.drop-down {
+  border: 1px solid $browse-box-border-color;
+}
+
+// sorting area end
+
+// Product display area
+
+.product-display{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product{
+  width: 48%;
+  height: 100%;
+  position: relative;
+  margin: 2% 0;
+}
+
+img {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.hover-shop-link {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  margin: -3vh 0;
+  background-color: $hover-shop-link-color;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  text-transform: capitalize;
+
+}
+
+.product:hover {
+  .hover-shop-link{
+    display: block;
+  }
+}
+
+// Product display area end
+
+@media screen and (min-width: $small-media-query){
+
+  .container{
+    @include display-flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+  }
+
+  .top{
+    width: 20%;
+  }
+
+  .list-options{
+    width: 100%;
+    border: 1px solid $browse-box-border-color;
+  }
+
+  .list-options-title{
+    border-bottom: 1px solid $browse-box-border-color;
+  }
+
+  .product-display{
+    width: 75%;
+    margin-left: 15px;
+  }
+
+  .drop-down {
+    border: none;
+    padding-left: 20px;
+  }
+
+  .product{
+    width: 32%;
+    height: 100%;
+    position: relative;
+    margin: 2% 0;
+  }
+
+  .product-display{
+    height: 100%;
+  }
+
+}
+
+@media screen and (min-width: $large-media-query){
+
+  .product{
+    width: 23%;
+    height: 100%;
+    position: relative;
+    margin: 2% 0;
+  }
+
+}
+
+@media screen and (min-width: $xlarge-media-query){
+
+  .big-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .container{
+    max-width: 1550px;
+    max-height: 817px;
+  }
+
+  .product-display{
+    height: 350px;
+  }
+
+
+
+}
