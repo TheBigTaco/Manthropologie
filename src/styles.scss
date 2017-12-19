@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+@mixin barber-font {
+  @font-family {
+    font-family: 'Jaapokki';
+    line-height: 1.3em;
+    src: url("./../../assets/jaapokki-regular.ttf") format("ttf");
+  }
+}
+
 $link-text: black;
 $link-hover-text: red;
 $small-link-text: blue;

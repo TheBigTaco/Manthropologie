@@ -1,5 +1,6 @@
 @import "../../styles";
 
+//small screen styles
 .nav {
   @include display-flex;
   width: 100%;
@@ -7,11 +8,11 @@
   background-color: honeydew;
 }
 
-.title{
+.title {
   font-size: 20px;
 }
 
-.login p{
+.openbtn p{
   display: none;
 }
 
@@ -44,12 +45,103 @@ a {
   }
 }
 
-.search, .login {
+.search, .openbtn {
   font-size: 15px;
   color: $small-link-text;
 }
 
 
+//The start of the MODAL
+
+// .wrapper {
+//   padding: 5% 20%;
+//   text-align:center;
+// }
+
+.btn {
+  text-transform:uppercase;
+  background-color: honeydew;
+
+  &.closebtn {
+    padding: 5px 10px;
+  }
+  &.openbtn {
+    padding: 20px;
+
+    &:hover {
+      box-shadow: 0 5px 5px 0px rgba(0,0,0,0.4);
+    }
+  }
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+  padding: 20px;
+}
+
+.modal-content {
+  background: goldenrod;
+	width: 90vw;
+  height: 65vh;
+	position: relative;
+	margin: 0 0;
+	padding: 0px 20px;
+  @include barber-font;
+  font-family: 'Jaapokki', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  hr {
+    margin-top: 10px;
+  }
+  input {
+    margin-bottom: 17px;
+    height: 35px;
+    font-size: .75em;
+    padding: 10px;
+  }
+  .create {
+    height: 45%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    h4 {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .btn {
+      text-align: center;
+      padding: 10px;
+      font-size: .75em;
+      width: 70px;
+    }
+  }
+  .login {
+    @extend .create;
+  }
+}
+
+.modal:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+#close {
+  display:none;
+}
+//end of MODAL
+
+//medium screen styling
 @media screen and (min-width: $medium-media-query) {
   * {
     background-color: honeydew;
