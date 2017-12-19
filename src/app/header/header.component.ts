@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   password: string;
   newUsername: string;
   newPassword: string;
+  loggedInUser: string = null;
   constructor(private userService: Manthro) { }
 
   ngOnInit() {
