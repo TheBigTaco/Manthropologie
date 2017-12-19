@@ -1,17 +1,24 @@
+<div class="nav">
 
-<div class="big-top-nav">
-  <div class="top-nav"><p class="search"><i class="fa fa-search" aria-hidden="true"></i>     Wishlist search bar</p></div>
-  <div class="top-nav">
-    <h1><a class="title" routerLink="">Manthropologie</a></h1>
+  <div class="big-bottom-nav">
+    <i class="fa fa-bars" aria-hidden="true" (click)="categoryClick()"></i>
+
   </div>
   <div class="top-nav">
-    <p><a routerLink="login" class="login">Login <i class="fa fa-user" aria-hidden="true"></i>
-</a></p>
+    <h1><a class="title" routerLink="" (click)="categoryClick('oneway')">Manthropologie</a></h1>
   </div>
+  <div class="big-top-nav">
+    <div class="top-nav"><p class="search"><i class="fa fa-search" aria-hidden="true"></i></p></div>
+    <div class="top-nav">
+      <p><a routerLink="login" class="login"><p>Login</p><i class="fa fa-user" aria-hidden="true"></i>
+      </a></p>
+    </div>
+  </div>
+
 </div>
-<div class="big-bottom-nav">
-  <p><a routerLink="clothing">Clothing</a></p>
-  <p><a routerLink="shoes-accessories">Shoes/Accessories</a></p>
-  <p><a routerLink="furniture">Furniture</a></p>
-  <p><a routerLink="grooming">Grooming</a></p>
+<div class="categories" *ngIf="display">
+  <p><a routerLink="clothing" (click)="categoryClick()">Clothing</a></p>
+  <p><a routerLink="shoes-accessories" (click)="categoryClick()">Shoes/Accessories</a></p>
+  <p><a routerLink="furniture" (click)="categoryClick()">Furniture</a></p>
+  <p><a routerLink="grooming" (click)="categoryClick()">Grooming</a></p>
 </div>
