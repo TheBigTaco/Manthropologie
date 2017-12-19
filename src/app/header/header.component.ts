@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { sha3_512 } from 'js-sha3';
 
 @Component({
   selector: 'app-header',
@@ -7,19 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   public display: boolean = false;
+  username: string;
+  password: string;
+  newUsername: string;
+  newPassword: string;
   constructor() { }
 
   ngOnInit() {
 
   }
 
-  // onResize(event) {
-  //   alert("hi");
-  //   let screenWidth = (window.screen.width);
-  //   if(screenWidth > 1025) {
-  //     this.display = true;
-  //   }
-  // }
+  login() {
+    console.log(this.username, this.password);
+    let hash = sha3_512(this.password);
+    console.log(hash);
+  }
 
   categoryClick(oneway) {
     let screenWidth = (window.screen.width);
