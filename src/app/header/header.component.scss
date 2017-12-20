@@ -1,19 +1,32 @@
 @import "../../styles";
 
+i {
+  color: white;
+}
+
+h1 {
+  @include barber-font;
+  font-family: 'Jaapokki', sans-serif;
+  color: white;
+}
+
 //small screen styles
 .nav {
   @include display-flex;
   width: 100%;
   align-items: baseline;
-  background-color: honeydew;
+  background-color: $light-copper;
 }
 
 .title {
   font-size: 20px;
 }
 
-.openbtn p{
+.openbtn span{
   display: none;
+}
+.openbtn {
+  text-align: center;
 }
 
 .big-top-nav{
@@ -53,14 +66,8 @@ a {
 
 //The start of the MODAL
 
-// .wrapper {
-//   padding: 5% 20%;
-//   text-align:center;
-// }
-
 .btn {
   text-transform:uppercase;
-  background-color: honeydew;
 
   &.closebtn {
     padding: 5px 10px;
