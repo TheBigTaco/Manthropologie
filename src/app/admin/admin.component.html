@@ -3,10 +3,16 @@
 
     <div class="product-form">
       <input type="text" [(ngModel)]="title" placeholder="Product Title">
-      <input type="text" [(ngModel)]="price" placeholder="Product Price">
-      <input type="text" [(ngModel)]="type" placeholder="Product Type">
-      <input type="text" [(ngModel)]="currentImage" placeholder="Product Image">
-      <button type="button" name="button" (click)="addImage()">Add Image</button>
+      <input type="number" [(ngModel)]="price" placeholder="Product Price">
+      <select type="text" [(ngModel)]="type">
+        <option value="/clothing">Clothing</option>
+        <option value="/shoes-accessories">Shoes/Accessories</option>
+        <option value="/furniture">Furniture</option>
+        <option value="/grooming">Grooming</option>
+      </select>
+      <input type="text" [(ngModel)]="image1" placeholder="Product Image 1">
+      <input type="text" [(ngModel)]="image2" placeholder="Product Image 2">
+      <input type="text" [(ngModel)]="image3" placeholder="Product Image 3">
       <textarea name="name" rows="8" cols="80" [(ngModel)]="description" placeholder="Product Description"></textarea>
       <button type="button" name="button" (click)="addProductClicked()">Add Product</button>
     </div>
