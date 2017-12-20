@@ -5,7 +5,7 @@
   @include display-flex;
   width: 100%;
   align-items: baseline;
-  background-color: honeydew;
+  background-color: $header-color;
 }
 
 .title {
