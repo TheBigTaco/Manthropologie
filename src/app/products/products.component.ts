@@ -11,6 +11,9 @@ import { Location } from '@angular/common';
   providers: [Manthro]
 })
 export class ProductsComponent implements OnInit {
+
+  public display: boolean = null;
+
   public category;
   public productId: string;
   public productToDisplay;
@@ -24,6 +27,14 @@ export class ProductsComponent implements OnInit {
     this.productToDisplay = this.manthro.getProductById(this.productId);
     this.category = window.location;
     console.log(this.productId);
+  }
+
+  sliderMove(input) {
+    if(input === this.display){
+      this.display = null;
+    }else{
+      this.display = input;
+    }
   }
 
 }
