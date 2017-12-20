@@ -15,6 +15,7 @@ export class ProductsComponent implements OnInit {
   public productId: string;
   public productToDisplay;
   constructor(private route: ActivatedRoute, private manthro: Manthro, private location: Location) { }
+  public display: boolean = null;
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
@@ -24,6 +25,14 @@ export class ProductsComponent implements OnInit {
     this.productToDisplay = this.manthro.getProductById(this.productId);
     this.category = window.location;
     console.log(this.productId);
+  }
+
+  sliderMove(input) {
+    if(input === this.display){
+      this.display = null;
+    }else{
+      this.display = input;
+    }
   }
 
 }

@@ -1,50 +1,98 @@
+@import "../../styles";
+
 .container{
-  display:flex;
-  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
+
 .selectMenu{
   display: flex;
-  margin-bottom: 30px;
   align-items: baseline;
 }
-#product-image{
-  width: 50%;
+
+#main-product-image{
+  width:100vw;
 }
-#product-description{
-  padding-left: 60px;
-  width: 50%;
-}
-img{
-  width: 100%;
-}
-h1{
-  margin-bottom: 20px;
-}
-h2{
-  margin-bottom: 30px;
-}
+
 p{
   font-size: 20px;
   width: 50px;
+  margin: 20px;
+}
 
-}
 select {
-  -webkit-appearance: button;
--webkit-border-radius: 2px;
--webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
--webkit-padding-end: 20px;
--webkit-padding-start: 2px;
--webkit-user-select: none;
-background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
-background-position: 97% center;
-background-repeat: no-repeat;
-border: 1px solid #AAA;
-color: #555;
-font-size: inherit;
-margin: 20px;
-overflow: hidden;
-padding: 5px 10px;
-text-overflow: ellipsis;
-white-space: nowrap;
-width: 300px;
+  background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  color: #555;
+  font-size: inherit;
+  margin: 20px;
+  overflow: hidden;
+  padding: 5px 10px;
+  white-space: nowrap;
+  width: 300px;
 }
+
+.product-container{
+  width:100vw;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.small-products{
+  display: flex;
+}
+
+.small-product-image{
+  width: 10vw;
+  height: 10vw;
+}
+
+.alt-photo{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.product-description{
+  width: 100%;
+  padding: 10px;
+}
+
+button{
+  height: 40px;
+  width: 100%;
+  background-color: $button-color;
+  color: white;
+}
+
+a{
+  margin: 20px;
+}
+
+
+
+// .product-container img:first-child {
+//   display: block;
+// }
+
+// #product-image{
+//   width: 100%;
+// }
+//
+// #product-description{
+//   padding-left: 60px;
+//   width: 50%;
+// }
+
+// .container{
+//   display:flex;
+//   margin-top: 20px;
+// }
