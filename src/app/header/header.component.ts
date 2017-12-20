@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { sha3_512 } from 'js-sha3';
-import { User } from './../user.model';
 import { Manthro } from './../manthro.service';
 import *  as firebase from 'firebase';
 import { Observable } from 'rxjs/Observable';
