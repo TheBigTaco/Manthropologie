@@ -1,25 +1,31 @@
 <div class="container">
   <div class="product-display">
 
+    <div class="product-form">
+      <input type="text" [(ngModel)]="title" placeholder="Product Title">
+      <input type="number" [(ngModel)]="price" placeholder="Product Price">
+      <select type="text" [(ngModel)]="type">
+        <option value="/clothing">Clothing</option>
+        <option value="/shoes-accessories">Shoes/Accessories</option>
+        <option value="/furniture">Furniture</option>
+        <option value="/grooming">Grooming</option>
+      </select>
+      <input type="text" [(ngModel)]="image1" placeholder="Product Image 1">
+      <input type="text" [(ngModel)]="image2" placeholder="Product Image 2">
+      <input type="text" [(ngModel)]="image3" placeholder="Product Image 3">
+      <textarea name="name" rows="8" cols="80" [(ngModel)]="description" placeholder="Product Description"></textarea>
+      <button type="button" name="button" (click)="addProductClicked()">Add Product</button>
+    </div>
     <div class="product-list" *ngFor="let product of products | async">
       <div class="product">
         <img src="{{product.images[0]}}" alt="Product Image">
         <p class="hover-shop-link" (click)="editProduct(product)">Edit</p>
         <p class="product-name">{{product.title}}</p>
-        <p class="product-price">{{product.price}}</p>
+        <p class="product-price">${{product.price}}</p>
         <input type="text" [(ngModel)]="newPrice" placeholder="New Product Price" *ngIf="editing">
         <button type="button" name="button" *ngIf="editing" (click)="submitEdit()">Submit Edit</button>
         <button type="button" name="button" (click)="beginDeleteProduct(product)" *ngIf="editing === false">Delete</button>
       </div>
     </div>
-  </div>
-  <div class="product-form">
-    <input type="text" [(ngModel)]="title" placeholder="Product Title">
-    <input type="text" [(ngModel)]="price" placeholder="Product Price">
-    <input type="text" [(ngModel)]="type" placeholder="Product Type">
-    <input type="text" [(ngModel)]="description" placeholder="Product Description">
-    <input type="text" [(ngModel)]="currentImage" placeholder="Product Image">
-    <button type="button" name="button" (click)="addImage()">Add Image</button>
-    <button type="button" name="button" (click)="addProductClicked()">Add Product</button>
   </div>
 </div>

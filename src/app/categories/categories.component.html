@@ -3,38 +3,42 @@
   <div class="container">
 
     <div class="top">
-        <div class="list-options">
+      <div class="list-options">
         <p class="list-options-title">Browse by:</p>
         <p class="drop-down">Dresses</p>
       </div>
       <div class="list-options">
-        <p class="list-options-title">Sort by:</p>
-        <p class="drop-down">Placeholder Brand</p>
-        <p class="drop-down">Placeholder Style</p>
-        <p class="drop-down">Etc.</p>
+        <p class="list-options-title">Sort by Price:</p>
+        <select [(ngModel)]="priceSorted">
+          <option value="low-high">Lowest to Highest</option>
+          <option value="high-low">Highest to Lowest</option>
+        </select>
       </div>
       <div class="list-options">
-        <p class="list-options-title">Filter by:</p>
-        <p class="drop-down">Placeholder Price</p>
-        <p class="drop-down">Placeholder Size</p>
-        <p class="drop-down">Etc.</p>
+        <p class="list-options-title">Filter by Price:</p>
+        <select [(ngModel)]="priceWanted">
+          <option value="all">All</option>
+          <option value="low">Under $50</option>
+          <option value="mid">$50 - $100</option>
+          <option value="high">Over $100</option>
+        </select>
       </div>
     </div>
     <!-- <div class="list-options">
-      <p>page 1/4</p>
-    </div> -->
+    <p>page 1/4</p>
+  </div> -->
 
 
 
-    <!-- <h3>Clothing</h3> -->
-    <div class="product-display">
-      <div *ngFor="let product of products | async">
-        <div class="product" (click)="goToDetailPage(product)">
-          <img src="{{product.images[0]}}" alt="Product Image">
-          <p class="hover-shop-link">Add to Cart</p>
-          <p class="product-name">{{product.title}}</p>
-          <p class="product-price">${{product.price}}</p>
-        </div>
+  <!-- <h3>Clothing</h3> -->
+  <div class="product-display">
+    <div *ngFor="let product of products | async | price:priceWanted | sort:priceSorted">
+      <div class="product" (click)="goToDetailPage(product)" *ngIf="category.pathname === product.type">
+        <img src="{{product.images[0]}}" alt="Product Image">
+        <p class="hover-shop-link">Add to Cart</p>
+        <p class="product-name">{{product.title}}</p>
+        <p class="product-price">${{product.price}}</p>
       </div>
     </div>
+  </div>
 </div>

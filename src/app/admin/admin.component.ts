@@ -12,9 +12,11 @@ export class AdminComponent implements OnInit {
   public category;
   public title: string;
   public price: number;
-  public type: string;
+  public type: string = "/clothing";
   public description: string;
-  public currentImage: string;
+  public image1: string;
+  public image2: string;
+  public image3: string;
   public images: string[] = [];
   public products;
   public editing: boolean = false;
@@ -49,21 +51,20 @@ export class AdminComponent implements OnInit {
     }
   }
 
-  addImage() {
-    this.images.push(this.currentImage);
-    this.currentImage = "";
-  }
-
   addProductClicked() {
-    if(this.currentImage != "") {
-      this.addImage();
-    }
+    this.images.push(this.image1);
+    this.images.push(this.image2);
+    this.images.push(this.image3);
+    this.image1 = "";
+    this.image2 = "";
+    this.image3 = "";
+
     let newProduct: Product = new Product(this.title, this.price, this.type, this.description, this.images);
     this.title = "";
     this.price = null;
     this.type = "";
     this.description = "";
-    this.currentImage = "";
+    this.images = [];
     this.manthro.addProduct(newProduct);
   }
 

@@ -12,6 +12,8 @@ import { Manthro } from './../manthro.service';
 export class CategoriesComponent implements OnInit {
   public category;
   public products;
+  public priceWanted: string = "all";
+  public priceSorted: string = "low-high";
   constructor(public manthro: Manthro, public router: Router) {
     this.products = manthro.getProducts();
   }
