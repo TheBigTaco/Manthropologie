@@ -14,6 +14,8 @@ import { ProductsComponent } from './products/products.component';
 import { UserComponent } from './user/user.component';
 import { AdminComponent } from './admin/admin.component';
 import { FooterComponent } from './footer/footer.component';
+import { PricePipe } from './price.pipe';
+import { SortPipe } from './sort.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -31,7 +33,9 @@ export const firebaseConfig = {
     ProductsComponent,
     UserComponent,
     AdminComponent,
-    FooterComponent
+    FooterComponent,
+    PricePipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
