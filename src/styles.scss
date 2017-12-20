@@ -5,15 +5,22 @@
   box-sizing: border-box;
 }
 
-// @import url("./../../assets/jaapokki-regular.ttf");
-// $Jaapokki: 'Jaapokki';
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:900|Catamaran:800,900|Montserrat:400,600|Palanquin+Dark:500');
 
-@mixin barber-font {
-  @font-family {
-    font-family: 'Jaapokki';
-    line-height: 1.3em;
-    src: url("./../../assets/jaapokki-regular.ttf") format("ttf");
-  }
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+h1, h2 {
+  font-family: 'Palanquin Dark', sans-serif;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+}
+
+h3, h4 {
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 //colors:
@@ -22,19 +29,12 @@ $copper: #C38E6B;
 $light-copper: #B46A4A;
 $grey: #4F4A42;
 $navy: #393A44;
+$modal-background: goldenrod;
 // $eggshell-blue: #B9CBD9;
 // $plate-blue: #5A8CA3;
 // $suit-slate: #686871;
 // $lightest-blanket: #B89F77;
 // $shirt: #9E916F;
-
-@mixin barber-font1 {
-  @font-family {
-    font-family: 'Jaapokki';
-    line-height: 1.3em;
-    src: url("/../../assets/jaapokki-regular.ttf") format("ttf");
-  }
-}
 
 $link-text: black;
 $link-hover-text: red;
@@ -42,10 +42,10 @@ $small-link-text: blue;
 $browse-box-color: lightgray;
 $browse-box-border-color: gray;
 $hover-shop-link-color: rgba(211,211,211, 0.7);
-$top-banner-color: pink;
+$top-banner-color: #C38E6B;
 $carousel-item-description-bg: rgba(211,211,211, 0.7);
-$feature-box-color: pink;
-$header-color: honeydew;
+$feature-box-color: #5D413F;
+$header-color: #C38E6B;
 $button-color: rebeccapurple;
 
 $small-media-query: 770px; //"tablet" - for screens sized between 770px and 1025px;
