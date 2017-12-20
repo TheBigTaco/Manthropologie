@@ -16,7 +16,6 @@
   }
 }
 
-
 //colors:
 $mauve: #5D413F;
 $copper: #C38E6B;
@@ -47,6 +46,7 @@ $top-banner-color: pink;
 $carousel-item-description-bg: rgba(211,211,211, 0.7);
 $feature-box-color: pink;
 $header-color: honeydew;
+$button-color: rebeccapurple;
 
 $small-media-query: 770px; //"tablet" - for screens sized between 770px and 1025px;
 $medium-media-query: 1025px; //"laptop" - for screens sized between 1025px and 1320px;
@@ -76,6 +76,15 @@ html {
 
 .container{
   padding: 15px;
+}
+
+a {
+  color:$link-text;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $link-hover-text;
 }
 //
 // h1, h2, h3 {
