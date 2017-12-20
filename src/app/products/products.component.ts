@@ -26,11 +26,8 @@ export class ProductsComponent implements OnInit {
   }
 
   sliderMove(input) {
-    if(input === this.display){
-      this.display = null;
-    }else{
-      this.display = input;
-    }
+    console.log(input);
+    this.display = input;
   }
 
 }

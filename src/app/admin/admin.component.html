@@ -20,11 +20,14 @@
       <div class="product">
         <img src="{{product.images[0]}}" alt="Product Image">
         <p class="hover-shop-link" (click)="editProduct(product)">Edit</p>
-        <p class="product-name">{{product.title}}</p>
-        <p class="product-price">${{product.price}}</p>
-        <input type="text" [(ngModel)]="newPrice" placeholder="New Product Price" *ngIf="editing">
-        <button type="button" name="button" *ngIf="editing" (click)="submitEdit()">Submit Edit</button>
-        <button type="button" name="button" (click)="beginDeleteProduct(product)" *ngIf="editing === false">Delete</button>
+        <p class="product-name" *ngIf="selectedProductId != product.$key">{{product.title}}</p>
+        <p class="product-price" *ngIf="selectedProductId != product.$key">${{product.price}}</p>
+        <p class="product-price" *ngIf="selectedProductId != product.$key"><small>{{product.description}}</small></p>
+        <input type="text" [(ngModel)]="product.title" placeholder="Edit Product Title" *ngIf="selectedProductId === product.$key">
+        <input type="number" [(ngModel)]="product.price" placeholder="Edit Product Price" *ngIf="selectedProductId === product.$key">
+        <textarea name="name" rows="8" cols="80" [(ngModel)]="product.description" placeholder="Edit Product Description" *ngIf="selectedProductId === product.$key"></textarea>
+        <button type="button" name="button" *ngIf="selectedProductId === product.$key" (click)="submitEdit(product.title, product.price, product.description)">Submit Edit</button>
+        <button type="button" name="button" (click)="beginDeleteProduct(product)" *ngIf="selectedProductId != product.$key">Delete</button>
       </div>
     </div>
   </div>

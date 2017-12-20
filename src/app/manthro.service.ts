@@ -22,10 +22,12 @@ export class Manthro {
     return this.database.object('product/' + productId);
   }
 
-  updateProduct(updatedProduct: string, newPrice: number) {
+  updateProduct(updatedProduct: string, newTitle: string, newPrice: number, newDescription: string) {
     var productInDatabase = this.getProductById(updatedProduct);
     productInDatabase.update({
-      price: newPrice
+      title: newTitle,
+      price: newPrice,
+      description: newDescription
     })
   }
 

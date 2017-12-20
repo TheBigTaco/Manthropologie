@@ -26,7 +26,7 @@
   <p><a routerLink="shoes-accessories" (click)="categoryClick()">Shoes/Accessories</a></p>
   <p><a routerLink="furniture" (click)="categoryClick()">Furniture</a></p>
   <p><a routerLink="grooming" (click)="categoryClick()">Grooming</a></p>
-  <p *ngIf="admin"><a routerLink="admin">Product List</a></p>
+  <p *ngIf="admin"><a routerLink="admin" (click)="categoryClick()">Product List</a></p>
 </div>
 
 <div class="medium">
