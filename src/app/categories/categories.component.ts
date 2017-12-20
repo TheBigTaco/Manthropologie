@@ -11,7 +11,6 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit() {
     this.category = window.location;
-    console.log(this.category);
   }
 
 }
