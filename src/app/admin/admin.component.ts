@@ -20,7 +20,9 @@ export class AdminComponent implements OnInit {
   public images: string[] = [];
   public products;
   public editing: boolean = false;
-  public newPrice: number;
+  // public newTitle: string;
+  // public newPrice: number;
+  // public newDescription: string;
   public selectedProductId: string;
   constructor(private manthro: Manthro) {
     this.products = manthro.getProducts();
@@ -40,9 +42,9 @@ export class AdminComponent implements OnInit {
     }
   }
 
-  submitEdit() {
-    this.editing = false;
-    this.manthro.updateProduct(this.selectedProductId, this.newPrice);
+  submitEdit(title, price, description) {
+    this.manthro.updateProduct(this.selectedProductId, title, price, description);
+    this.selectedProductId = null;
   }
 
   beginDeleteProduct(product) {
