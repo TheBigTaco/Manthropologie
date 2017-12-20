@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+  public display: boolean = null;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  sliderMove(input) {
+    if(input === this.display){
+      this.display = null;
+    }else{
+      this.display = input;
+    }
   }
 
 }
