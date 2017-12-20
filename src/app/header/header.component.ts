@@ -62,15 +62,15 @@ export class HeaderComponent implements OnInit {
   }
 
   categoryClick(oneway) {
-    let screenWidth = (window.screen.width);
-    if(screenWidth > 1025) {
+    let screenWidth = (window.innerWidth);
+    if(screenWidth < 1025) {
       if(oneway) {
         this.display = false;
       } else {
         this.display = !this.display;
       }
     } else {
-      this.display = true;
+      this.display = false;
     }
   }
 

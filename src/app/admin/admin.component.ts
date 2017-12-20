@@ -13,7 +13,7 @@ export class AdminComponent implements OnInit {
   public title: string;
   public price: number;
   public type: string;
-  public color: string;
+  public description: string;
   public currentImage: string;
   public images: string[] = [];
   public products;
@@ -58,11 +58,11 @@ export class AdminComponent implements OnInit {
     if(this.currentImage != "") {
       this.addImage();
     }
-    let newProduct: Product = new Product(this.title, this.price, this.type, this.color, this.images);
+    let newProduct: Product = new Product(this.title, this.price, this.type, this.description, this.images);
     this.title = "";
     this.price = null;
     this.type = "";
-    this.color = "";
+    this.description = "";
     this.currentImage = "";
     this.manthro.addProduct(newProduct);
   }
