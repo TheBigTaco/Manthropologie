@@ -1,10 +1,10 @@
-<div class="container" *ngIf="category.pathname === '/product/:id'">
+<div class="container">
   <div id="product-image">
-    <img src="../../assets/sweater1.jpg">
+    <img src="{{(productToDisplay | async)?.images[0]}}">
   </div>
   <div id="product-description">
-    <h1>Product Title</h1>
-    <h2>$135</h2>
+    <h1>{{(productToDisplay | async)?.title}}</h1>
+    <h2>{{(productToDisplay | async)?.price}}</h2>
     <div class="selectMenu">
     <p>Size:</p>
     <select>
