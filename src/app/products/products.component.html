@@ -1,30 +1,23 @@
 <div class="container">
-  <div id="product-image">
-    <img src="{{(productToDisplay | async)?.images[0]}}">
-  </div>
   <div id="product-description">
-    <h1>{{(productToDisplay | async)?.title}}</h1>
-    <h2>{{(productToDisplay | async)?.price}}</h2>
-    <div class="selectMenu">
       <div class="product-container" *ngIf="display === null">
-        <img src="../../assets/sweater1.jpg">
+        <img src="{{(productToDisplay | async)?.images[0]}}">
       </div>
       <div class="product-container" *ngIf="display === 'wood1'">
-        <img src="../../assets/wood-1.jpg">
+        <img src="{{(productToDisplay | async)?.images[1]}}">
       </div>
       <div class="product-container" *ngIf="display === 'boots2'">
-        <img src="../../assets/boots2.jpg">
+        <img src="{{(productToDisplay | async)?.images[2]}}">
       </div>
-
       <div class="small-products">
-        <img (click)="sliderMove('boots2')" class="small-product-image" src="../../assets/boots2.jpg">
-        <img (click)="sliderMove('wood1')" class="small-product-image" src="../../assets/wood-1.jpg">
+        <img (click)="sliderMove('wood1')" class="small-product-image" src="{{(productToDisplay | async)?.images[1]}}">
+        <img (click)="sliderMove('boots2')" class="small-product-image" src="{{(productToDisplay | async)?.images[2]}}">
       </div>
 
       <div id="product-container">
 
-        <h1>Product Title</h1>
-        <h2>$135</h2>
+        <h1>{{(productToDisplay | async)?.title}}</h1>
+        <h2>${{(productToDisplay | async)?.price}}</h2>
 
         <div class="product-description">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

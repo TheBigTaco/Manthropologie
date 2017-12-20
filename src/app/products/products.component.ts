@@ -20,11 +20,9 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
      this.productId = urlParameters['id'];
-     console.log(urlParameters['id']);
     });
     this.productToDisplay = this.manthro.getProductById(this.productId);
     this.category = window.location;
-    console.log(this.productId);
   }
 
   sliderMove(input) {
