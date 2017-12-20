@@ -11,22 +11,18 @@ import { Location } from '@angular/common';
   providers: [Manthro]
 })
 export class ProductsComponent implements OnInit {
-
-  public display: boolean = null;
-
   public category;
   public productId: string;
   public productToDisplay;
   constructor(private route: ActivatedRoute, private manthro: Manthro, private location: Location) { }
+  public display: boolean = null;
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
      this.productId = urlParameters['id'];
-     console.log(urlParameters['id']);
     });
     this.productToDisplay = this.manthro.getProductById(this.productId);
     this.category = window.location;
-    console.log(this.productId);
   }
 
   sliderMove(input) {

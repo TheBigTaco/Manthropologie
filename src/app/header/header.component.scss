@@ -1,25 +1,24 @@
 @import "../../styles";
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 i {
   color: white;
 }
 
-h1 {
-  @include barber-font;
-  font-family: 'Jaapokki', sans-serif;
-  color: white;
-}
-
 //small screen styles
+.medium {
+  display: none;
+  }
+
 .nav {
   @include display-flex;
   width: 100%;
   align-items: baseline;
   background-color: $light-copper;
-}
-
-.title {
-  font-size: 20px;
 }
 
 .openbtn span{
@@ -97,14 +96,12 @@ a {
 }
 
 .modal-content {
-  background: goldenrod;
+  background: $modal-background;
 	width: 90vw;
   height: 65vh;
 	position: relative;
 	margin: 0 0;
 	padding: 0px 20px;
-  @include barber-font;
-  font-family: 'Jaapokki', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -150,8 +147,9 @@ a {
 
 //medium screen styling
 @media screen and (min-width: $medium-media-query) {
-  * {
-    background-color: honeydew;
+  .medium {
+    display: flex;
+    background-color: $copper;
   }
 
   p {
@@ -165,11 +163,21 @@ a {
   }
 
   .big-top-nav {
-    align-items: baseline;
+    width: 50vw;
+    .top-nav {
+      margin: 0;
+      // p {
+      //   color: red;
+      // }
+    }
   }
 
-.nav {
+  .categories {
+    display: none;
+  }
 
-}
+  .big-bottom-nav {
+    display: none;
+  }
 
 }
