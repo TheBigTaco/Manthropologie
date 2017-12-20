@@ -64,6 +64,7 @@ export class AdminComponent implements OnInit {
     this.type = "";
     this.description = "";
     this.currentImage = "";
+    this.images = [];
     this.manthro.addProduct(newProduct);
   }
 
