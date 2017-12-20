@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { sha3_512 } from 'js-sha3';
 import { User } from './../user.model';
 import { Manthro } from './../manthro.service';
-import *  as firebase from 'firebase'; //THIS IS THE DUMBEST THING WHY DID I NEED THIS I HATE EVERYTHING UGH
+import *  as firebase from 'firebase';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-header',
@@ -16,23 +17,22 @@ export class HeaderComponent implements OnInit {
   password: string;
   newUsername: string;
   newPassword: string;
-  loggedInUser;
+  loggedInUser: Observable<firebase.User>;
   admin: boolean = false;
-  constructor(private userService: Manthro) {
-    firebase.auth().onAuthStateChanged(function(user){
-      if(user) {
-        this.loggedInUser = user;
-      } else {
-        this.loggedInUser = null;
-      }
-      console.log(this.loggedInUser);
-      if(this.loggedInUser != null && this.loggedInUser.uid === "uWGfalcH57Ws49XyYTKzVZKFGU82") {
-        this.admin = true;
-      }
-    })
+  private user;
+  constructor(public manthro: Manthro) {
+
+  }
+
+  ngDoCheck() {
+    this.user = firebase.auth().currentUser;
+    if(this.user != null && this.user.uid === "uWGfalcH57Ws49XyYTKzVZKFGU82") {
+      this.admin = true;
+    }
   }
 
   ngOnInit() {
+
   }
 
   login() {
@@ -47,9 +47,9 @@ export class HeaderComponent implements OnInit {
       this.admin = false;
     }
     firebase.auth().signOut().then(function(){
-      alert("You're signed out");
+
     }).catch(function(error) {
-      alert("signout error, please try again");
+
     })
   }
 

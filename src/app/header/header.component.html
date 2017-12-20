@@ -10,8 +10,9 @@
   <div class="big-top-nav">
     <div class="top-nav"><p class="search"><i class="fa fa-search" aria-hidden="true"></i></p></div>
     <div class="top-nav">
-      <p><a href="#modal-one" class="btn openbtn"><span>Login</span><i class="fa fa-user" aria-hidden="true"></i>
+      <p *ngIf="!user"><a href="#modal-one" class="btn openbtn"><span>Login</span><i class="fa fa-user" aria-hidden="true"></i>
       </a></p>
+      <a *ngIf="user" href="#close"><button type="button" name="button" (click)="logout()">logout</button></a>
     </div>
   </div>
 </div>
@@ -41,6 +42,5 @@
       <input type="text" [(ngModel)]="newPassword" placeholder="Password">
       <a href="#close" class="btn closebtn" (click)="createAccount()">Create</a>
     </div>
-    <a href="#close"><button type="button" name="button" (click)="logout()">logout</button></a>
   </div>
 </div>
