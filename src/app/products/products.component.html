@@ -25,6 +25,15 @@
     </div>
 
   <div class="selectMenu">
+
+  <div id="product-image">
+    <img src="{{(productToDisplay | async)?.images[0]}}">
+  </div>
+  <div id="product-description">
+    <h1>{{(productToDisplay | async)?.title}}</h1>
+    <h2>{{(productToDisplay | async)?.price}}</h2>
+    <div class="selectMenu">
+
     <p>Size:</p>
     <select>
       <option value="small">Small</option>

@@ -1,6 +1,6 @@
 <div class="big-container">
 
-  <div class="container" *ngIf="category.pathname != '/'">
+  <div class="container">
 
     <div class="top">
         <div class="list-options">
@@ -27,63 +27,14 @@
 
 
     <!-- <h3>Clothing</h3> -->
-    <div class="product-display" *ngIf="category.pathname === '/clothing'">
-      <div class="product">
-        <img src="../../assets/accessorieswatch1.jpeg" alt="Product Image">
-        <p class="hover-shop-link">Add to Cart</p>
-        <p class="product-name">Product Name Text</p>
-        <p class="product-price">Product Price Text</p>
+    <div class="product-display">
+      <div *ngFor="let product of products | async">
+        <div class="product" (click)="goToDetailPage(product)">
+          <img src="{{product.images[0]}}" alt="Product Image">
+          <p class="hover-shop-link">Add to Cart</p>
+          <p class="product-name">{{product.title}}</p>
+          <p class="product-price">${{product.price}}</p>
+        </div>
       </div>
-
-      <div class="product">
-        <img src="../../assets/accessorieswatch3.jpg" alt="Product Image">
-        <p class="hover-shop-link">Add to Cart</p>
-        <p class="product-name">Product Name Text</p>
-        <p class="product-price">Product Price Text</p>
-      </div>
-
-      <div class="product">
-        <img src="../../assets/boots2.jpg" alt="Product Image">
-        <p class="hover-shop-link">Add to Cart</p>
-        <p class="product-name">Product Name Text</p>
-        <p class="product-price">Product Price Text</p>
-      </div>
-
-      <div class="product">
-        <img src="../../assets/furniturechair2.gif" alt="Product Image">
-        <p class="hover-shop-link">Add to Cart</p>
-        <p class="product-name">Product Name Text</p>
-        <p class="product-price">Product Price Text</p>
     </div>
-
-    <div class="product">
-      <img src="../../assets/grooming1.jpg" alt="Product Image">
-      <p class="hover-shop-link">Add to Cart</p>
-      <p class="product-name">Product Name Text</p>
-      <p class="product-price">Product Price Text</p>
-    </div>
-
-    <div class="product">
-      <img src="../../assets/sweater1.jpg" alt="Product Image">
-      <p class="hover-shop-link">Add to Cart</p>
-      <p class="product-name">Product Name Text</p>
-      <p class="product-price">Product Price Text</p>
-    </div>
-
-    <div class="product">
-      <img src="../../assets/sweater1.jpg" alt="Product Image">
-      <p class="hover-shop-link">Add to Cart</p>
-      <p class="product-name">Product Name Text</p>
-      <p class="product-price">Product Price Text</p>
-    </div>
-
-    <div class="product">
-      <img src="../../assets/sweater1.jpg" alt="Product Image">
-      <p class="hover-shop-link">Add to Cart</p>
-      <p class="product-name">Product Name Text</p>
-      <p class="product-price">Product Price Text</p>
-    </div>
-
-  </div>
-
 </div>

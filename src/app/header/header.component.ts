@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { sha3_512 } from 'js-sha3';
-import { User } from './../user.model';
 import { Manthro } from './../manthro.service';
 import *  as firebase from 'firebase';
 import { Observable } from 'rxjs/Observable';
@@ -63,15 +62,15 @@ export class HeaderComponent implements OnInit {
   }
 
   categoryClick(oneway) {
-    let screenWidth = (window.screen.width);
-    if(screenWidth > 1025) {
+    let screenWidth = (window.innerWidth);
+    if(screenWidth < 1025) {
       if(oneway) {
         this.display = false;
       } else {
         this.display = !this.display;
       }
     } else {
-      this.display = true;
+      this.display = false;
     }
   }
 

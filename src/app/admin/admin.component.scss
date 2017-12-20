@@ -1,0 +1,39 @@
+@import "../../styles";
+
+.product-display{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product{
+  width: 48%;
+  height: 100%;
+  position: relative;
+  margin: 2% 0;
+}
+
+img {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.hover-shop-link {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  margin: -3vh 0;
+  background-color: $hover-shop-link-color;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  text-transform: capitalize;
+
+}
+
+.product:hover {
+  .hover-shop-link{
+    display: block;
+  }
+}

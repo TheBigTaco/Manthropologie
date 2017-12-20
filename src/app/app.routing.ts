@@ -2,6 +2,8 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SplashComponent } from './splash/splash.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { ProductsComponent } from './products/products.component';
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
   {
@@ -24,6 +26,14 @@ const appRoutes: Routes = [
     path: "grooming",
     component: CategoriesComponent
   },
+  {
+    path: "admin",
+    component: AdminComponent
+  },
+  {
+    path: "product/:id",
+    component: ProductsComponent
+  }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
