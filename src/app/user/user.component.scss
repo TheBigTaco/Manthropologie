@@ -1,0 +1,26 @@
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.basket-checkout{
+  display: flex;
+}
+
+img{
+  width: 50%;
+}
+
+button{
+  height: 50px;
+  width: 50%;
+  background-color: $button-color;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: $mauve;
+}

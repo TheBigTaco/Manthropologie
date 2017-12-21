@@ -1,13 +1,16 @@
 <div class="container">
-  <h1>Cart</h1>
+  <h1>Basket</h1>
   <div *ngFor="let product of basket">
     <p>{{(product.product | async)?.title}} ${{product.subtotalPrice}} subtotal (${{(product.product | async)?.price}} each) Qty: {{product.quantity}}</p>
     <br>
   </div>
   <p *ngIf="basket.length != 0">Total: ${{totalPrice}}</p>
-  <p *ngIf="popup">Thank you for your purchase</p>
+  <div *ngIf="popup" class="basket-checkout">
+    <p>Thank you for your purchase</p>
+    <img src="http://i0.kym-cdn.com/entries/icons/original/000/023/463/6360103332924270401274957217_Ron.jpg" alt="Ron Swanson">
+</div>
   <br>
-  <p *ngIf="basket.length === 0">There are no items in your cart</p>
+  <p *ngIf="basket.length === 0">There are no items in your basket</p>
   <br>
   <button type="button" name="button" id="checkoutButton" (click)="checkout()">Checkout</button>
 </div>
