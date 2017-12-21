@@ -1,5 +1,19 @@
 @import "../../styles";
-@import url('https://fonts.googleapis.com/css?family=Limelight|Special+Elite');
+
+
+app-footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+}
+
+.container{
+  background-color: $header-color;
+  background-image: url("../../assets/black-linen.png");
+  border-top: 1px solid black;
+}
 
 .student-descriptions{
   display: flex;
@@ -10,15 +24,14 @@
 }
 #footer-title{
   margin-bottom: 10px;
-  font-size: 20px;
-  font-family: 'Limelight', cursive;
+  font-size: 15px;
 }
 
-.container{
-  height: auto;
-  background-color: $header-color;
+p{
+  font-size: 10px;
 }
+
 
 h4{
-  font-size: 18px;
+  font-size: 12px;
 }

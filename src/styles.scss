@@ -11,7 +11,9 @@ $box-shadow: 2px 2px 3px black;
 
 body {
   font-family: 'Montserrat', sans-serif;
+  position: relative;
 }
+
 h1, h2 {
   font-family: 'Palanquin Dark', sans-serif;
   letter-spacing: 0.0625em;
@@ -37,15 +39,15 @@ $lightest-blanket: #B89F77;
 // $shirt: #9E916F;
 
 $link-text: black;
-$link-hover-text: red;
+$link-hover-text: black;
 $small-link-text: blue;
-$browse-box-color: lightgray;
-$browse-box-border-color: gray;
+$browse-box-color: #C38E6B;
+$browse-box-border-color: black;
 $hover-shop-link-color: rgba(211,211,211, 0.7);
 $top-banner-color: #C38E6B;
 $carousel-item-description-bg: rgba(211,211,211, 0.7);
 $feature-box-color: #5D413F;
-$header-color: #C38E6B;
+$header-color: #B46A4A;
 $button-color: rebeccapurple;
 
 $small-media-query: 770px; //"tablet" - for screens sized between 770px and 1025px;

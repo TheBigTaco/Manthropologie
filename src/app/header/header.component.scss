@@ -11,10 +11,15 @@ button {
 
 i {
   color: white;
+  padding: 5px;
+}
+
+i:hover {
+  border-bottom: 0.5px solid gray;
 }
 
 //small screen styles
-.medium {
+#medium {
   display: none;
   }
 
@@ -36,7 +41,6 @@ i {
 
 .big-top-nav{
   display: flex;
-  justify-content: space-between;
 }
 
 .top-nav{
@@ -76,6 +80,7 @@ a {
 
   &.closebtn {
     padding: 5px 10px;
+    border-bottom: 1px solid black;
   }
   &.openbtn {
     padding: 20px;
@@ -119,12 +124,14 @@ a {
     height: 35px;
     font-size: .75em;
     padding: 10px;
+    width: 100%;
   }
   .create {
     height: 45%;
     justify-content: center;
     display: flex;
     flex-direction: column;
+    width: 100%;
     h4 {
       margin-bottom: 10px;
       margin-top: 10px;
@@ -138,6 +145,7 @@ a {
   }
   .login {
     @extend .create;
+    width: 100%;
   }
 }
 
@@ -154,11 +162,20 @@ a {
 //medium screen styling
 @media screen and (min-width: $medium-media-query) {
 
-  .medium {
+  #medium {
     border-top: .5px solid black;
     display: flex;
     background-color: $copper;
     box-shadow: 2px 2px 4px black;
+    justify-content: center;
+    h4{
+      margin: 0 3vw;
+      padding: 1px;
+    }
+    h4:hover{
+      padding: 0;
+      border-bottom: 1px solid gray;
+    }
   }
 
   p {
@@ -173,12 +190,12 @@ a {
 
   .big-top-nav {
     width: 50vw;
-    .top-nav {
-      margin: 0;
-      // p {
-      //   color: red;
-      // }
-    }
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  div.big-top-nav{
+    padding: 0;
   }
 
   .categories {
@@ -187,6 +204,25 @@ a {
 
   .big-bottom-nav {
     display: none;
+  }
+
+  .top-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+  }
+
+  div:nth-child(2) {
+    align-self: center;
+    justify-content: flex-start;
+  }
+
+  .nav {
+    align-items: flex-start;
+    background-color: $light-copper;
+    background-image: url("../../assets/black-linen.png");
+    box-shadow: 2px 2px 4px black;
   }
 
 }
