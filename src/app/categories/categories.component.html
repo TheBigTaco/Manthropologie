@@ -35,10 +35,10 @@
     <div class="ghost" *ngFor="let product of products | async | price:priceWanted | sort:priceSorted">
       <div class="product" *ngIf="category.pathname === product.type">
         <img src="{{product.images[0]}}" alt="Product Image" (click)="goToDetailPage(product)">
-        <p class="hover-shop-link" (click)="addToBasket(product)">Add to Cart</p>
+        <p class="hover-shop-link" (click)="addToBasket(product)">Add to Basket</p>
         <p class="product-name" (click)="goToDetailPage(product)">{{product.title}}</p>
         <p class="product-price" (click)="goToDetailPage(product)">${{product.price}}</p>
-        <p *ngIf="popup === product.$key">Added to Cart!</p>
+        <p *ngIf="popup === product.$key">Added to Basket!</p>
       </div>
     </div>
   </div>
