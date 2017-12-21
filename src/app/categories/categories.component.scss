@@ -1,11 +1,5 @@
 @import "../../styles";
 
-/* For testing only */
-
-/* End for testing */
-
-// Sorting area
-
 .list-options{
   margin: 10px 0;
 }
@@ -19,13 +13,6 @@
   font-size: 15px;
 }
 
-.drop-down {
-  border: 1px solid $browse-box-border-color;
-}
-
-// sorting area end
-
-// Product display area
 
 .product-display{
   display: flex;
@@ -65,6 +52,26 @@ img {
   }
 }
 
+select{
+  appearance: none;
+  background-color: $hover-shop-link-color;
+  border: none;
+  border-bottom: 2px solid gray;
+  border-radius: 0px;
+  padding: 10px;
+  font-size: 20px;
+  width: 100%;
+  &:focus {
+      box-shadow: 0 3px 4px rgba(gray, 0.3) inset;
+      // outline is critical for usability
+      outline: 1px solid gray;
+      outline-offset: -#{1px}; //offset vs width
+    }
+    &:hover{
+      outline: 3px solid $eggshell-blue;
+    }
+}
+
 // Product display area end
 
 @media screen and (min-width: $small-media-query){
@@ -81,7 +88,7 @@ img {
 
   .list-options{
     width: 100%;
-    border: 1px solid $browse-box-border-color;
+    // border: 1px solid $browse-box-border-color;
   }
 
   .list-options-title{
