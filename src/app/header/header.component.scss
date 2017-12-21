@@ -61,9 +61,12 @@ i:hover {
 .categories {
   & p{
     font-size: 25px;
-    background-color: lightyellow;
+    background-color: gray;
     padding: 15px 25px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid black;
+  }
+  a:hover{
+    color: white;
   }
 }
 
@@ -118,7 +121,7 @@ a {
 }
 
 .modal-content {
-  background: $modal-background;
+  background: $plate-blue;
 	width: 90vw;
   height: 65vh;
 	position: relative;

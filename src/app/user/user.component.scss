@@ -1,11 +1,37 @@
+@import "../../styles";
+
 .container{
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.basket-checkout{
+.checkout{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.items{
+  width: 100%;
+  border-bottom: 1px solid black;
+
+}
+
+.total{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.total, .items{
+  background-color: white;
+  p, h4{
+    margin: 10px;
+  }
 }
 
 img{
@@ -23,4 +49,23 @@ button{
 
 button:hover {
   background-color: $mauve;
+}
+
+.basket-checkout{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  img{
+    height: 100%;
+  }
+  p{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    color: white;
+    font-size: 25px;
+  }
+  .empty-basket{
+    color:white;
+  }
 }
