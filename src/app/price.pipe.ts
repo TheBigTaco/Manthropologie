@@ -28,7 +28,6 @@ export class PricePipe implements PipeTransform {
         }
       }
     }
-    console.log(output);
     return output;
   }
 

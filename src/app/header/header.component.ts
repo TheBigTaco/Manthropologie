@@ -3,6 +3,7 @@ import { sha3_512 } from 'js-sha3';
 import { Manthro } from './../manthro.service';
 import *  as firebase from 'firebase';
 import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +20,7 @@ export class HeaderComponent implements OnInit {
   loggedInUser: Observable<firebase.User>;
   admin: boolean = false;
   private user;
-  constructor(public manthro: Manthro) {
+  constructor(public manthro: Manthro, public router: Router) {
 
   }
 
@@ -32,6 +33,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  goToBasket() {
+    this.router.navigate(['user', this.user.uid]);
   }
 
   login() {

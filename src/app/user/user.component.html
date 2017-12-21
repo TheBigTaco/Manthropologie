@@ -1,3 +1,14 @@
-<p>
-  user works!
-</p>
+<div class="container">
+  <h1>Cart</h1>
+  <div *ngFor="let product of basket">
+    <p>{{(product | async)?.title}}
+    ${{(product | async)?.price}}</p>
+    <br>
+  </div>
+  <p *ngIf="basket.length != 0">Total: ${{totalPrice}}</p>
+  <p *ngIf="popup">Thank you for your purchase</p>
+  <br>
+  <p *ngIf="basket.length === 0">There are no items in your cart</p>
+  <br>
+  <button type="button" name="button" id="checkoutButton" (click)="checkout()">Checkout</button>
+</div>

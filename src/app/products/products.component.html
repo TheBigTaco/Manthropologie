@@ -25,27 +25,27 @@
         </div>
 
         <div class="selectMenu">
-    <p>Size:</p>
+    <!-- <p>Size:</p>
     <select>
       <option value="small">Small</option>
       <option value="medium">Medium</option>
       <option value="large">Large</option>
     </select>
-    </div>
+    </div> -->
 
     <div class="selectMenu">
       <p>Qty:</p>
-      <select>
-        <option value="one">1</option>
-        <option value="two">2</option>
-        <option value="three">3</option>
-        <option value="four">4</option>
-        <option value="five">5</option>
+      <select [(ngModel)]="quantity">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
       </select>
     </div>
 
   </div>
-  <button type="submit">ADD TO BASKET</button>
-  <a href="#">Add to Favorites</a>
+  <button type="button" (click)="addToBasket()">ADD TO BASKET</button>
+  <p *ngIf="popup === productId">Added to Cart!</p>
 
 </div>
