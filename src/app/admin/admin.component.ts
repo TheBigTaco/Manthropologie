@@ -64,7 +64,7 @@ export class AdminComponent implements OnInit {
     let newProduct: Product = new Product(this.title, this.price, this.type, this.description, this.images);
     this.title = "";
     this.price = null;
-    this.type = "";
+    this.type = "/clothing";
     this.description = "";
     this.images = [];
     this.manthro.addProduct(newProduct);
