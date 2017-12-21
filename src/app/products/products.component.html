@@ -16,36 +16,34 @@
       </div>
 
       <div id="product-container">
-
-        <h2>{{(productToDisplay | async)?.title}}</h2>
-        <h3>${{(productToDisplay | async)?.price}}</h3>
-
-        <div class="product-description">
-          {{(productToDisplay | async)?.description}}
-        </div>
-
+        <div class="description-container">
+          <h2>{{(productToDisplay | async)?.title}}</h2>
+          <h3>${{(productToDisplay | async)?.price}}</h3>
+          <div class="product-description">
+            {{(productToDisplay | async)?.description}}
+          </div>
         <div class="selectMenu">
-    <!-- <p>Size:</p>
-    <select>
-      <option value="small">Small</option>
-      <option value="medium">Medium</option>
-      <option value="large">Large</option>
-    </select>
-    </div> -->
 
-    <div class="selectMenu">
-      <p>Qty:</p>
-      <select [(ngModel)]="quantity">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
+      <div class="selectMenu">
+        <p>Qty:</p>
+        <select [(ngModel)]="quantity">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
     </div>
-
+    <button type="button" (click)="addToBasket()">ADD TO BASKET</button>
+    <p *ngIf="popup === productId">Added to Cart!</p>
   </div>
-  <button type="button" (click)="addToBasket()">ADD TO BASKET</button>
-  <p *ngIf="popup === productId">Added to Cart!</p>
-
 </div>
+
+<!-- <p>Size:</p>
+<select>
+<option value="small">Small</option>
+<option value="medium">Medium</option>
+<option value="large">Large</option>
+</select>
+</div> -->

@@ -12,6 +12,9 @@
 .selectMenu{
   display: flex;
   align-items: baseline;
+  p {
+    margin: 0px;
+  }
 }
 
 p{
@@ -31,12 +34,14 @@ select {
   overflow: hidden;
   padding: 5px 10px;
   white-space: nowrap;
-  width: 300px;
+  width: 100px;
 }
 .product-description{
-  padding: 10px;
   height: 100%;
   width: 100%;
+  p {
+    top: 10px;
+  }
 }
 
 .product-container{
@@ -54,6 +59,7 @@ select {
 
 .small-products{
   display: flex;
+  margin-top: 5px;
 }
 
 .small-product-image{
@@ -71,33 +77,86 @@ select {
 }
 
 button{
-  height: 40px;
-  width: 33%;
-
+  height: 50px;
+  width: 50%;
   background-color: $button-color;
   color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: $mauve;
 }
 
 a{
   margin: 20px;
 }
 
+.description-container {
+  background-color: white;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+@media screen and (min-width: $medium-media-query){
+  #product-description {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .product-container{
+    width: 38%;
+    margin: 0 5px;
+    img{
+    }
+  }
+
+  .small-products{
+    width: 10%;
+    flex-direction: column;
+    justify-content: space-around;
+    order: -1;
+    margin: 0;
+    background-color: white;
+    img{
+      width: 100%;
+      height: auto;
+      margin: 0 0 5px 0;
+    }
+  }
+
+  #product-container{
+    width: 50%;
+  }
+
+  .description-container{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.product-description{
+  height: auto;
+}
+}
+
+.container{
+  padding: 0;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: $xlarge-media-query){
+
+.container{
+  max-width: 1550px;
+  min-width: 1000px;
+  margin: 0 0 50px 0;
+  display: flex;
+}
 
 
-// .product-container img:first-child {
-//   display: block;
-// }
-
-// #product-image{
-//   width: 100%;
-// }
-//
-// #product-description{
-//   padding-left: 60px;
-//   width: 50%;
-// }
-
-// .container{
-//   display:flex;
-//   margin-top: 20px;
-// }
+}
