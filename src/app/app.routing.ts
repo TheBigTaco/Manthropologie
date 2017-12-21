@@ -4,6 +4,7 @@ import { SplashComponent } from './splash/splash.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ProductsComponent } from './products/products.component';
 import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
 
 const appRoutes: Routes = [
   {
@@ -33,6 +34,10 @@ const appRoutes: Routes = [
   {
     path: "product/:id",
     component: ProductsComponent
+  },
+  {
+    path: "user/:id",
+    component: UserComponent
   }
 ];
 
