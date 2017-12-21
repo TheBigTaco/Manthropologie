@@ -48,7 +48,8 @@ $top-banner-color: #C38E6B;
 $carousel-item-description-bg: rgba(211,211,211, 0.7);
 $feature-box-color: #5D413F;
 $header-color: #B46A4A;
-$button-color: rebeccapurple;
+$button-color: $lightest-blanket;
+$footer-margin: 0 0 150px 0;
 
 $small-media-query: 770px; //"tablet" - for screens sized between 770px and 1025px;
 $medium-media-query: 1025px; //"laptop" - for screens sized between 1025px and 1320px;

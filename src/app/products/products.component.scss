@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: $footer-margin;
+  padding: 50px;
 }
 
 .selectMenu{
@@ -39,6 +41,11 @@ select {
 
 .product-container{
   width:100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: white;
   img{
     width: 100%;
     height: 100%;
@@ -50,8 +57,9 @@ select {
 }
 
 .small-product-image{
-  width: 10vw;
-  height: 10vw;
+  width: 15vw;
+  height: 15vw;
+  margin: 5px 5px 0px 0px;
 }
 
 .alt-photo{
@@ -64,7 +72,8 @@ select {
 
 button{
   height: 40px;
-  width: 100%;
+  width: 33%;
+
   background-color: $button-color;
   color: white;
 }
