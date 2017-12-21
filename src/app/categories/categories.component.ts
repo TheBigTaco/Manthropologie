@@ -17,6 +17,8 @@ export class CategoriesComponent implements OnInit {
   public popup;
   public priceWanted: string = "all";
   public priceSorted: string = "low-high";
+  public wasInBasket: boolean = false;
+  public newProduct;
   constructor(public manthro: Manthro, public router: Router) {
     this.products = manthro.getProducts();
   }
@@ -41,11 +43,32 @@ export class CategoriesComponent implements OnInit {
       alert("Please sign into account to add to basket");
     } else {
       if(this.user.basket != undefined) {
-        this.user.basket.push(product.$key);
+        for(let i = 0; i < this.user.basket.length; i++) {
+          if(this.user.basket[i].productKey === product) {
+            this.user.basket[i].quantity++;
+            this.wasInBasket = true;
+            break;
+          } else {
+            this.newProduct = {
+              productKey : product,
+              quantity : 1
+            }
+          }
+        }
+        if(this.wasInBasket) {
+          this.wasInBasket = false;
+        } else {
+          this.user.basket.push(this.newProduct);
+        }
       } else {
-        this.user.basket = [product.$key];
+        let newProduct = product;
+        let addedProduct = {
+          productKey : product,
+          quantity : 1
+        }
+        this.user.basket = [addedProduct];
       }
-      this.popup = product.$key;
+      this.popup = product;
       setTimeout((() => {
         this.removeConfirmation();
       }), 3000);
