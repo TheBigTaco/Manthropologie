@@ -1,8 +1,7 @@
 <div class="container">
   <h1>Cart</h1>
   <div *ngFor="let product of basket">
-    <p>{{(product | async)?.title}}
-    ${{(product | async)?.price}}</p>
+    <p>{{(product.product | async)?.title}} ${{product.subtotalPrice}} subtotal (${{(product.product | async)?.price}} each) Qty: {{product.quantity}}</p>
     <br>
   </div>
   <p *ngIf="basket.length != 0">Total: ${{totalPrice}}</p>
