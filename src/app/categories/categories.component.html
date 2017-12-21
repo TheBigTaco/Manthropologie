@@ -32,7 +32,7 @@
 
   <!-- <h3>Clothing</h3> -->
   <div class="product-display">
-    <div *ngFor="let product of products | async | price:priceWanted | sort:priceSorted">
+    <div class="ghost" *ngFor="let product of products | async | price:priceWanted | sort:priceSorted">
       <div class="product" (click)="goToDetailPage(product)" *ngIf="category.pathname === product.type">
         <img src="{{product.images[0]}}" alt="Product Image">
         <p class="hover-shop-link">Add to Cart</p>
