@@ -9,13 +9,15 @@
 
   <div class="big-top-nav">
     <div class="top-nav">
-      <p class="search" (click)="goToBasket()"><i class="fa fa-search" aria-hidden="true"></i></p>
+      <p class="search" (click)="goToBasket()"><i class="fa fa-shopping-cart" aria-hidden="true"></p>
     </div>
 
     <div class="top-nav">
       <p *ngIf="!user"><a href="#modal-one" class="btn openbtn"><span>Login</span><i class="fa fa-user" aria-hidden="true"></i>
       </a></p>
-      <a *ngIf="user" href="#close"><button type="button" name="button" (click)="logout()">logout</button></a>
+      <a *ngIf="user" href="#close"><button type="button" name="button" (click)="logout()">
+        <!-- <i class="fa fa-sign-out" aria-hidden="true"></i> -->
+        logout</button></a>
     </div>
 
   </div>
