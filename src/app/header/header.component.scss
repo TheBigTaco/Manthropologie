@@ -1,5 +1,9 @@
 @import "../../styles";
 
+body{
+  background-image: url("../../assets/black-linen.png");
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -19,6 +23,8 @@ i {
   width: 100%;
   align-items: baseline;
   background-color: $light-copper;
+  background-image: url("../../assets/black-linen.png");
+  box-shadow: 2px 2px 4px black;
 }
 
 .openbtn span{
@@ -147,9 +153,12 @@ a {
 
 //medium screen styling
 @media screen and (min-width: $medium-media-query) {
+
   .medium {
+    border-top: .5px solid black;
     display: flex;
     background-color: $copper;
+    box-shadow: 2px 2px 4px black;
   }
 
   p {

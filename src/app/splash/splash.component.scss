@@ -9,6 +9,10 @@ app-splash {
   width: 100%;
 }
 
+h3{
+  color: $copper;
+}
+
 .top-container{
   display: flex;
   justify-content: center;
@@ -20,6 +24,7 @@ app-splash {
   text-align: center;
   background-color: $top-banner-color;
   padding: 40px;
+  box-shadow: $box-shadow;
 }
 
 .carousel-wrapper{
@@ -40,6 +45,7 @@ app-splash {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: $box-shadow;
 }
 
 .carousel-item-description {
@@ -163,6 +169,7 @@ app-splash {
     width: 40%;
     height: 100%;
     overflow: hidden;
+    box-shadow: $box-shadow; 
   }
 
   .carousel-item-description{
@@ -181,6 +188,7 @@ app-splash {
   .feature-box {
     display: block;
     background-color: $feature-box-color;
+    background-image: url("../../assets/black-linen.png");
     width: 46%;
     padding: 40px;
     text-align: center;
