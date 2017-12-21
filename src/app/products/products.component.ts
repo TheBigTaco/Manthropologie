@@ -18,6 +18,8 @@ export class ProductsComponent implements OnInit {
   private user;
   public popup;
   public quantity: number = 1;
+  public wasInBasket: boolean = false;
+  public newProduct;
   constructor(private route: ActivatedRoute, private manthro: Manthro, private location: Location) { }
   public display: boolean = null;
 
@@ -39,19 +41,40 @@ export class ProductsComponent implements OnInit {
   removeConfirmation() {
     this.popup = null;
   }
+  getQuantity() {
+    console.log(this.quantity);
+  }
   addToBasket() {
     if(this.user === null) {
       alert("Please sign into account to add to basket");
     } else {
       if(this.user.basket != undefined) {
         for (let i = 0; i < this.quantity; i++) {
-          this.user.basket.push(this.productId);
+          if(this.user.basket[i].productKey === this.productId) {
+            for(let j = 0; j < this.quantity; j++) {
+              this.user.basket[i].quantity++;
+            }
+            console.log(this.user.basket[i].quantity);
+            this.wasInBasket = true;
+            break;
+          } else {
+            this.newProduct = {
+              productKey : this.productId,
+              quantity : this.quantity
+            }
+          }
+        }
+        if(this.wasInBasket) {
+          this.wasInBasket = false;
+        } else {
+          this.user.basket.push(this.newProduct);
         }
       } else {
-        this.user.basket = [this.productId];
-        for (let i = 0; i < this.quantity - 1; i++) {
-          this.user.basket.push(this.productId);
+        let addedProduct = {
+          productKey : this.productId,
+          quantity : this.quantity
         }
+        this.user.basket = [addedProduct];
       }
       this.popup = this.productId;
       setTimeout((() => {
