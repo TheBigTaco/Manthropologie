@@ -7,11 +7,20 @@ body{
 button {
   background-color: transparent;
   border: none;
+  color: white;
+  font-size: 15px;
+  width: 100%;
+  color: darkgrey;
+
 }
 
+
 i {
+  font-size: 25px;
   color: white;
   padding: 5px;
+  color: darkgrey;
+  ;
 }
 
 i:hover {
@@ -45,6 +54,8 @@ i:hover {
 
 .top-nav{
   margin: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .categories {
@@ -219,10 +230,14 @@ a {
   }
 
   .nav {
-    align-items: flex-start;
+    align-items: center;
     background-color: $light-copper;
     background-image: url("../../assets/black-linen.png");
     box-shadow: 2px 2px 4px black;
+  }
+
+  i{
+    font-size: 25px;
   }
 
 }
