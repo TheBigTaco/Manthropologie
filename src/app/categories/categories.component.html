@@ -33,17 +33,17 @@
 <!-- <h3>Clothing</h3> -->
 <div class="product-display">
 
-  <div class="not-product" *ngFor="let product of products | async | price:priceWanted | sort:priceSorted">
-    <div class="ghost" *ngIf="category.pathname === product.type">
-      <div class="not-product">
-        <div class="product">
+  <div class="ghost" *ngFor="let product of products | async | price:priceWanted | sort:priceSorted">
+    <div class="product" *ngIf="category.pathname === product.type">
+      <!-- <div class="not-product"> -->
+        <!-- <div class="product"> -->
           <img src="{{product.images[0]}}" alt="Product Image" (click)="goToDetailPage(product)">
           <p class="hover-shop-link" (click)="addToBasket(product.$key)">Add to Basket</p>
           <p class="product-name" (click)="goToDetailPage(product)">{{product.title}}</p>
           <p class="product-price" (click)="goToDetailPage(product)">${{product.price}}</p>
           <p *ngIf="popup === product.$key">Added to Basket!</p>
-        </div>
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
     </div>
   </div>
 </div>
