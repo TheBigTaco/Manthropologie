@@ -1,5 +1,19 @@
 # Manthropologie
 
+## Set-Up
+
+- Clone this project to your desktop.
+- Obtain your own firebase API Key from https://console.firebase.google.com . While you won't be able to view our products, you can see the basic structure of our website.
+- Create a document called "api-keys.ts" in the "app" folder (Manthropologie/src/app/api-keys.ts). Add your API Key to this document in the following format:
+  export var masterFirebaseConfig = {
+      apiKey: "XXXXXX",
+      authDomain: "XXXX",
+      databaseURL: "XXXX",
+      storageBucket: "XXXXX",
+    };
+- Run $ng serve to launch the application. Open a web browser window and navigate to: http://localhost:4200 (** NG Live Development Server is running on http://localhost:4200 ** )
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server

@@ -23,6 +23,7 @@
     "angularfire2": "^4.0.0-rc.0",
     "core-js": "^2.4.1",
     "firebase": "^3.9.0",
+    "gulp": "^3.9.1",
     "js-sha3": "^0.7.0",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
@@ -45,5 +46,16 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbellwaite/Manthropologie.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/jbellwaite/Manthropologie/issues"
+  },
+  "homepage": "https://github.com/jbellwaite/Manthropologie#readme"
 }
