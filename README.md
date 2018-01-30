@@ -11,6 +11,9 @@
       databaseURL: "XXXX",
       storageBucket: "XXXXX",
     };
+
+  (format is located in app.module.ts for reference, if needed)
+- Run $npm install
 - Run $ng serve to launch the application. Open a web browser window and navigate to: http://localhost:4200 (** NG Live Development Server is running on http://localhost:4200 ** )
 
 
