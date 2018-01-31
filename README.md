@@ -1,17 +1,27 @@
 # Manthropologie
 
+### An e-commerce website for men
+
+#### by Jessie Waite, Adam Titus, Susannah Lowe, and Rakhee Gandhi
+
+## Description
+
+This application was created for week 5 of Epicodus' Javascript Course. This app was made in collaboration between Jessie, Adam, Susannah, and Rakhee. The app is a fake e-commerce site made using Angular.js, HTML, SASS and lots of design inspiration from Anthropologie. The app allows for both user and admin usage. Admins can log-in to manage stock by adding, editing, or removing products. Users can sign in to add products to their shopping cart. Users can "checkout", but does not allow for actual intake of personal information (at this point, because we don't actually have real products). The app uses Firebase to maintain our products.
+
+The website was designed mobile-first.
+
 ## Set-Up
 
-- Clone this project to your desktop.
+- Clone the project to your desktop.
 - Obtain your own firebase API Key from https://console.firebase.google.com . While you won't be able to view our products, you can see the basic structure of our website.
 - Create a document called "api-keys.ts" in the "app" folder (Manthropologie/src/app/api-keys.ts). Add your API Key to this document in the following format:
-  export var masterFirebaseConfig = {
-      apiKey: "XXXXXX",
-      authDomain: "XXXX",
-      databaseURL: "XXXX",
-      storageBucket: "XXXXX",
-    };
 
+      export var masterFirebaseConfig = {
+          apiKey: "XXXXXX",
+          authDomain: "XXXX",
+          databaseURL: "XXXX",
+          storageBucket: "XXXXX",
+        };
   (format is located in app.module.ts for reference, if needed)
 - Run $npm install
 - Run $ng serve to launch the application. Open a web browser window and navigate to: http://localhost:4200 (** NG Live Development Server is running on http://localhost:4200 ** )
@@ -19,27 +29,45 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
-## Development server
+## Screenshots
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### Mobile version
 
-## Code scaffolding
+![Mobile Home Page](src/assets/mobilehomepage.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+![Mobile Home Page](src/assets/mobilemenu.png)
 
-## Build
+![Mobile Home Page](src/assets/mobileproductdisplaypage.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+![Mobile Home Page](src/assets/mobileloginmenu.png)
 
-## Running unit tests
+#### Desktop version
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Desktop Home Page](src/assets/desktophomepage.png)
 
-## Running end-to-end tests
+![Desktop Home Page](src/assets/desktopproductspage.png)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
 
-## Further help
+## Technologies Used:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This project was build using Angular.js. We used Firebase to store product information. HTML and SCSS was used to style the page.
+
+## Known Bugs
+
+Because this project was built as an in-class assignment, there are no actual products to display unless you have our specific Firebase log-in information.
+
+At this time, the  "shopping cart" link does not work unless you are logged in.
+
+For unknown reasons, blank white boxes appear in our products pages when we add new products.
+
+##Support and Contact Details
+
+You can email Jessie, Adam, Susannah, or Rakhee with questions or comments regarding this app.
+
+Jessie - jess.bell@me.com
+Adam -
+Susannah -
+Rakhee -
+
+
+Copyright(c) 2017
