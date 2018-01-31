@@ -6,6 +6,9 @@
 
 ## Description
 
+Check out our site:
+https://manthropologie-1cc91.firebaseapp.com/
+
 This application was created for week 5 of Epicodus' Javascript Course. This app was made in collaboration between Jessie, Adam, Susannah, and Rakhee. The app is a fake e-commerce site made using Angular.js, HTML, SASS and lots of design inspiration from Anthropologie. The app allows for both user and admin usage. Admins can log-in to manage stock by adding, editing, or removing products. Users can sign in to add products to their shopping cart. Users can "checkout", but does not allow for actual intake of personal information (at this point, because we don't actually have real products). The app uses Firebase to maintain our products.
 
 The website was designed mobile-first.
