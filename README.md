@@ -13,6 +13,15 @@ This application was created for week 5 of Epicodus' Javascript Course. This app
 
 The website was designed mobile-first.
 
+## Technologies Needed
+
+* Angular CLI
+* Firebase
+* Node.js
+* SHA3 Node
+* A code text editor such as Atom.
+
+
 ## Set-Up
 
 - Clone the project to your desktop.
@@ -61,16 +70,18 @@ Because this project was built as an in-class assignment, there are no actual pr
 
 At this time, the  "shopping cart" link does not work unless you are logged in.
 
-For unknown reasons, blank white boxes appear in our products pages when we add new products.
+Html and styling errors cause blank white boxes appear in our products pages when we add new products.
+
+Administrator login is not seeded and must be changed per firebase server. Only one administrator can exist at a time. Must change user id string on line 29 in header.component.ts to your user id you want to be administrator.
 
 ##Support and Contact Details
 
 You can email Jessie, Adam, Susannah, or Rakhee with questions or comments regarding this app.
 
-Jessie - jess.bell@me.com
-Adam -
-Susannah -
-Rakhee -
+[Jessie](https://www.linkedin.com/in/jbellwaite/) - jess.bell@me.com
+[Adam](https://www.linkedin.com/in/adam-titus/) - adamtitus76@gmail.com
+[Susannah](https://www.linkedin.com/in/susannahlowe/) - lowesusannah@gmail.com
+[Rakhee](https://www.linkedin.com/in/rakheegandhi/) - rpgandhi@gmail.com
 
 
 Copyright(c) 2017
