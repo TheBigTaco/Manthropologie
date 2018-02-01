@@ -74,14 +74,14 @@ Html and styling errors cause blank white boxes appear in our products pages whe
 
 Administrator login is not seeded and must be changed per firebase server. Only one administrator can exist at a time. Must change user id string on line 29 in header.component.ts to your user id you want to be administrator.
 
-##Support and Contact Details
+## Support and Contact Details
 
 You can email Jessie, Adam, Susannah, or Rakhee with questions or comments regarding this app.
 
-[Jessie](https://www.linkedin.com/in/jbellwaite/) - jess.bell@me.com
-[Adam](https://www.linkedin.com/in/adam-titus/) - adamtitus76@gmail.com
-[Susannah](https://www.linkedin.com/in/susannahlowe/) - lowesusannah@gmail.com
-[Rakhee](https://www.linkedin.com/in/rakheegandhi/) - rpgandhi@gmail.com
+* [Jessie](https://www.linkedin.com/in/jbellwaite/) - jess.bell@me.com
+* [Adam](https://www.linkedin.com/in/adam-titus/) - adamtitus76@gmail.com
+* [Susannah](https://www.linkedin.com/in/susannahlowe/) - lowesusannah@gmail.com
+* [Rakhee](https://www.linkedin.com/in/rakheegandhi/) - rpgandhi@gmail.com
 
 
 Copyright(c) 2017
